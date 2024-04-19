@@ -32,11 +32,12 @@ class DidiImageCard extends HTMLElement {
                 </ha-card>
             `;
             this.content = this.querySelector('div');
+            this.content.innerHTML = `
+                <img src="${url}?${now}" style="width: 100%" />
+            `;
         }
         // done repeatedly
-        this.content.innerHTML = `
-            <img src="${url}?${now}" style="width: 100%" />
-        `;
+
     }
 
     static getStubConfig() {
